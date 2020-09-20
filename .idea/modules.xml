@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/ExercitiiJava.iml" filepath="$PROJECT_DIR$/ExercitiiJava.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MeniuRestaurantTema/MeniuRestaurantTema.iml" filepath="$PROJECT_DIR$/MeniuRestaurantTema/MeniuRestaurantTema.iml" />
+    </modules>
+  </component>
+</project>

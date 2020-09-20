@@ -1,55 +1,66 @@
 package meniu;
 
 
+import ingredient.Ingredient;
+
 import java.util.ArrayList;
 import java.util.List;
 
-import java.util.Objects;
-
-public class menuItem extends meniuRestaurant {
-
-    String nume;
-    String pret;
-    String categorie;
-    String ingrediente;
+public class menuItem {
+    String itemNume;
+    List<Ingredient> ingredientList = new ArrayList<Ingredient>();
+    double price=0.0d;
 
 
-    public menuItem(String nume, String pret, String categorie) {
-        super(nume, categorie);
-
-        this.nume = nume;
-        this.pret = pret;
-        this.categorie = categorie;
-
-    }
-
-    public menuItem(String nume, String pret, String categorie, String ingrediente) {
-           super(nume, categorie);
-                this.nume = nume;
-        this.pret = pret;
-        this.categorie = categorie;
-        this.ingrediente = ingrediente;
+    public menuItem(String itemNume, Ingredient... ingrediente) {
+        this.itemNume = itemNume;
+        for (Ingredient i : ingrediente) {
+            ingredientList.add(i);
+        }
     }
 
 
-    public String getNumeItem() {
-        return nume;
+    public void addIngredient(Ingredient... ingrediente) {
+        for (Ingredient i : ingrediente) {
+            ingredientList.add(i);
+        }
 
     }
 
-    public String getPretItem() {
-        return pret;
+public double calculatePrice(){
+        for (Ingredient i: ingredientList) {
+             price+=i.getIngredientPret();
+        }return price;
 
+}
+
+    public List<Ingredient> getIngredientList() {
+        return ingredientList;
     }
 
-    public String getCategorieItem() {
-        return categorie;
+    public String getItemNume() {
+        return itemNume;
     }
 
-    public String getIngredienteItem() {
-        return ingrediente;
 
+    public void setIngredientList(List<Ingredient> ingredientList) {
+
+        this.ingredientList = ingredientList;
     }
+
+
+    public void setItemNume(String itemNume) {
+        this.itemNume = itemNume;
+    }
+
+    @Override
+    public String toString() {
+        return "menuItem{" +
+                "itemNume='" + itemNume + '\'' +
+                ", ingredientList=" + ingredientList +
+                '}';
+    }
+
 
 }
 

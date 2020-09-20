@@ -1,25 +1,10 @@
 package ingredient;
 
-import java.util.ArrayList;
+public interface Ingredient {
 
-public class Ingredient {
+    public String getIngredientName();
+    public double getIngredientPret();
+    public String getCategorie();
 
-    String nume;
-    String pret;
-
-    public Ingredient(String nume, String pret) {
-        //  ListaIngrediente =new ArrayList<>();
-        this.nume = nume;
-        this.pret = pret;
-
-    }
-
-    public String getIngredientName() {
-        return nume;
-    }
-
-    public String getIngredientPret() {
-        return pret;
-    }
 
 }
