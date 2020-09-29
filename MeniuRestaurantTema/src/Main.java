@@ -39,6 +39,7 @@ public class Main {
         menu4.displayMenu();
 
         menu4.searchByName("Piure");
+        menu3.searchByName("Piure");
 
         r.displayItems(menu3);
         r.displayItems(menu4);

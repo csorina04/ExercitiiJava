@@ -9,7 +9,7 @@ public class Restaurant {
     private String nume;
     List list = new ArrayList();
     private List<menuItem> menuItemList = new ArrayList<>();
-    private List<meniuRestaurant> meniuRestaurantList = new ArrayList<>();
+    private List<meniuRestaurant> meniuRestaurantList = new ArrayList<meniuRestaurant>();
 
     public Restaurant(String nume) {
 
@@ -33,13 +33,7 @@ public class Restaurant {
         }
     }
 
-    public void searchByName(String itemNume) {
-        for (menuItem m : menuItemList) {
-            if (m.toString().contains(itemNume)) {
-                System.out.println(m.itemNume +  m.getItemNume() + " price: " + m.calculatePrice());
-            }
-
-        }
-    }
 }
+
+
 
